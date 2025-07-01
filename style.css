@@ -1025,3 +1025,200 @@ section {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .portfolio-container {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+  }
+
+  section {
+    padding: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navlist {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 40px 20px;
+  }
+
+  .about-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-text {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .heading1, .heading {
+    font-size: 28px;
+  }
+
+  .Technical-bars .bar {
+    margin: 10px 0;
+  }
+
+  .radial-bars {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+  }
+
+  .container1 {
+    padding: 10px;
+  }
+
+  section {
+    padding: 30px 10px;
+    flex-direction: column;
+  }
+
+  .bar i {
+    font-size: 20px;
+  }
+
+  .progress-line span::after,
+  .progress-line span::before {
+    font-size: 10px;
+    top: -22px;
+    right: -15px;
+  }
+
+  #services {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-container,
+  .right-container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .right-container {
+    background: none;
+  }
+
+  .content {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content .detail {
+    font-size: 1.2rem;
+  }
+
+  .navlist {
+    flex-direction: column;
+    position: static;
+    background: #081b29;
+    padding: 10px 0;
+  }
+
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+  }
+
+  .details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-box {
+    width: 90%;
+    min-height: auto;
+  }
+
+  .portfolio-content {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    width: 90%;
+    height: auto;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-text h2 {
+    font-size: 40px;
+  }
+
+  .main-text h2 {
+    font-size: 40px;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .about h2 {
+    font-size: 36px;
+  }
+
+  .about-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .radial-skill-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .radial-bars {
+    width: 140px;
+    height: 140px;
+  }
+
+  .container1 {
+    padding: 10px;
+    margin: 10px auto;
+  }
+
+  .btn-container button {
+    width: auto;
+    padding: 10px 20px;
+  }
+}
