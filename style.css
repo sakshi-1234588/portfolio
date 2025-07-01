@@ -9,7 +9,6 @@
 body {
   color: white;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-
 }
 .portfolio-container {
   min-height: 100vh;
@@ -142,7 +141,10 @@ body {
 }
 .content h1 span {
   color: #5DB9EE;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
+
 
 .content .detail {
   font-size: 1.5rem;
@@ -240,10 +242,12 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1100px;
   margin: auto;
   gap: 7rem;
@@ -274,18 +278,19 @@ body {
   padding: 20px;
   color: #FFF;
   writing-mode: horizontal-tb;
+  text-align: center;
 }
 .about h2 {
   font-size: 50px;
+  margin-bottom: 5px;
 }
-.about h4 {
-  font-size: 30px;
-}
+
 .about-text span {
   color: #0ef;
 }
+
 .services {
-  columns: aliceblue;
+  color: aliceblue;
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 4rem;
@@ -298,78 +303,157 @@ body {
 .sub-title span {
   color: #0ef;
 }
+
+
 .container {
   padding: 90px;
 }
- .services-list {
-   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
-  grid-gap: 40px;
-  margin-top: 10%;
+
+ /* Services Container */
+#services {
+  padding: 100px 20px;
+}
+
+/* Card Layout - Horizontal */
+.services-list {
+  display: flex;
+  flex-direction: row;     
+  flex-wrap: wrap;         
   justify-content: center;
+  gap: 30px;
 }
-.services-list div {
-  background-color: transparent;
-  padding: 40px;
-  font-size: 20px;
-  font-weight: 13px;
-  border-right: 10px;
+
+/* Individual Card */
+.service-box {
+  background-color: #0c1f31;
   border-radius: 20px;
-  transition: background 0.5s, transform 0.5s;
-  box-shadow: 1px 1px 20px #012290f7,
-            1px 1px 40px #0053b8f7;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  padding: 30px 25px;
+  width: 380px;         /* Fix width to keep uniform */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
-.services-list div i {
-  font-size: 50px;
-  margin-bottom: 30px;
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
 }
-.services-list div h2 {
+
+.service-box i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.service-box h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #00ffff;
+}
+
+.service-box p {
+  font-size: 20px;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.service-box .read {
+  text-decoration: none;
+  background-color: #00ffff;
+  color: #000;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.service-box .read:hover {
+  background-color: #0ef;
+  color: #000;
+  box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+}
+
+
+.details-section {
+  background-color: #0c1f31;
+  margin: 50px auto;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  width: 85%;
+  max-width: 1000px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.details-section h2 {
+  font-size: 16px;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.details-section .text {
   font-size: 30px;
-  font-weight: 500;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 20vh; 
+  flex-wrap: wrap;
+}
+
+.details-box {
+  background: #081b29;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 340px;
+  min-height: 480px;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.details-box h2 {
+  font-size: 22px; /* Consistent with service-box */
+  color: #00ffff;
   margin-bottom: 15px;
 }
 
-.services-list div a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 12px;
-  margin-top: 20px;
-  display: inline-block;
+.details-box .text {
+  font-size: 16px; /* Match with service-box text */
+  line-height: 1.6;
+  color: #ddd;
 }
-.read {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #0ef;
-  border-radius: 40px;
-  font-size: 16px;
-  color: #081b29;
-  letter-spacing: 1px;
-  text-decoration: none;
-  font-weight: 600;
-  opacity: 0;
-  animation: slideTop 1s ease forwards;
-  animation-delay: 1s;
-  box-shadow: 0 0 5px #5DB9EE,
-  0 0 25px #5DB9EE;
+.details-box:hover {
+  background-color: #0ef;
+  color: #000;
 }
-.read:hover {
-  box-shadow: 0 0 5px cyan,
-  0 0 25px cyan, 0 0 50px cyan,
-  0 0 100px cyan, 0 0 200px cyan;
+.details-box:hover .text {
+  color: #000;
 }
-.services-list div:hover {
-  transform: translateY(-10px);
+.details-box:hover h2 {
+  color: #000;
 }
 
-.container1 {
-  max-width: 600px;
-  width: 100%;
-  height: auto;
-  padding: 10px;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+.radial-skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 700px;
   margin: 0 auto;
 }
+
+
 section {
   display: flex;
   flex-wrap: wrap;
@@ -377,8 +461,29 @@ section {
   gap: 1rem;               
 }
 
+.section-title, .main-text h2 {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+.section-title span {
+  color: #0ef;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 4px;
+}
 
-.heading1 {
+
+.container1 {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 238, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.heading {
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 10px;
@@ -386,7 +491,7 @@ section {
   margin-bottom: 20px;
 }
 .bar {
-  font-size: 40px;
+  font-size: 30px;
 }
 .Technical-bars .bar {
   margin: 20px 0;
@@ -411,8 +516,8 @@ section {
   position: relative;
   border-radius: 20px;
   width: 100%;
-  height: 5px;
-  background-color: #222;
+  height: 8px;
+  background-color: #000;
   animation: animate 1s cubic-bezier(1,0,0,1) forwards;
   transform: scaleX(0);
   transform-origin: left;
@@ -427,10 +532,10 @@ section {
   background-color: #0ef;
   position: absolute;
   border-radius: 10px;
-  animation: animate 1s 1s cubic-bezier(1,0,0,1) forwards;
-  transform: scaleX(0);
-  transform-origin: left;
- }
+  width: 0; /* Start with 0 width */
+  transition: width 2s ease-in-out; /* Animate width */
+}
+
  .progress-line.html span {
      width: 90%;
  }
@@ -447,47 +552,7 @@ section {
      width: 65%;
  }
 
- .progress-line span::after {
-  content: "";
-  position: absolute;
-  padding: 1px 8px;
-  background-color: #000;
-  color: #fff;
-  font-size: 12px;
-  border-radius: 3px;
-  top: -28px;
-  right: -20px;
-  animation: showText 0.5s 1.5s linear forwards;
-  opacity: 0;
- }
- .progress-line.html span::after {
-     content: "90%";
- }
- .progress-line.CSS3 span::after {
-  content: "80%";
- }
- .progress-line.JavaScript span::after {
-     content: "75%";
- }
- .progress-line.Python span::after {
-     content: "85%";
- }
- .progress-line.React span::after {
-     content: "65%";
- } 
- .progress-line span::before {
-  content: "";
-  position: absolute;
-  height: 0;
-  border: 7px solid transparent;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-color: #000;
-  top: -10px;
-  left: 100%;
-  animation: showText .5s 1.5s linear forwards;
-  opacity: 0;
- }
+ 
  @keyframes showText {
   100% {
     opacity: 1;
@@ -498,8 +563,9 @@ section {
   position: relative;
   width: 160px;
   height: 160px;
-  margin: 20px;
+  margin: 40px;
   display: inline-block;
+  color: #0ef;
 }
 
 .radial-bars svg {
@@ -516,6 +582,61 @@ section {
   stroke-width: 15;
 }
 
+.progress-percent {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-size: 14px;
+  color: #0ef;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+.progress-line {
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  height: 5px;
+  background-color: #00c4cc;
+  overflow: visible;
+  margin-bottom: 30px;
+}
+
+.progress-line span {
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background-color: #0ef;
+  border-radius: 10px;
+  transition: width 2s ease-in-out;
+}
+
+
+
+/* Default - hidden headings before scroll */
+.animate-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+/* Visible when scrolled */
+.animate-heading.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.progress-line.animate {
+  transform: scaleX(1);
+}
+
+.progress-line.animate span {
+  transform: scaleX(1);
+}
+
 /* Foreground path */
 .path {
   fill: none;
@@ -524,20 +645,6 @@ section {
   stroke-dasharray: 502;
   stroke-dashoffset: 502;
   transition: stroke-dashoffset 2s ease;
-}
-
-/* Individual progress (give different classes) */
-.path-90 {
-  stroke-dashoffset: calc(502 - (502 * 0.90));
-}
-.path-65 {
-  stroke-dashoffset: calc(502 - (502 * 0.65));
-}
-.path-75 {
-  stroke-dashoffset: calc(502 - (502 * 0.75));
-}
-.path-85 {
-  stroke-dashoffset: calc(502 - (502 * 0.85));
 }
 
 @keyframes fill-animation {
@@ -553,8 +660,9 @@ section {
   transform: translate(-50%, -50%);
   font-size: 1.5rem;
   font-weight: bold;
-  color: #00eeff;
+  color: #0ef;
 }
+
 
 .text {
   text-align: center;
@@ -579,6 +687,7 @@ section {
 .main-text h2 span {
   color: #0ef;
 }
+
 
 /* Portfolio Grid Layout */
 .portfolio-content {
@@ -701,6 +810,16 @@ section {
   color: #0ef;
 }
 
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
 .contact-text h4 {
   margin: 15px 0;
   color: rgba(228, 228, 228, 1);
@@ -813,10 +932,6 @@ section {
 }
 
 
-
-
-
-
 /* Keyframes */
 @keyframes slideleft {
   0% {
@@ -829,9 +944,7 @@ section {
   }
 }
 
- 
-
-  
+   
 @keyframes slideRight {
   0% {
     transform: translateX(100px);
@@ -901,4 +1014,14 @@ section {
     transform: translateY(0px);
     opacity: 1;
   }
+}
+.animate-heading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.animate-heading.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
