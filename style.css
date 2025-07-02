@@ -84,11 +84,22 @@ body {
 
 .icons {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  margin: 20px 0;
+  gap: 15px;
 }
+
+.icons a i {
+  font-size: 20px;
+  color: #00eeff;
+  transition: 0.3s;
+}
+
+.icons a i:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
 
 .icons .fa-brands {
   display: flex;
@@ -1027,115 +1038,199 @@ section {
 }
 
 @media (max-width: 768px) {
-  /* General Reset */
-  body {
+  /* Global Settings */
+  html, body {
     overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+    width: 100%;
   }
 
-  section {
-    padding: 30px 10px;
-    flex-direction: column;
+  section, .container, .container1 {
+    padding: 30px 15px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .portfolio-container {
+  @media (max-width: 768px) {
+  .profile-pic {
+    display: block;
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .left-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0;
-    margin-top: 50px;
-    width: 100vw;
   }
 
-.left-container {
-  text-align: center;
-  padding: 10px 20px;
+  .right-container {
+    display: none; /* Optional if it’s decorative */
+  }
 }
 
 
-  .left-container, .right-container {
+  /* Left & Right container */
+  .left-container,
+  .right-container {
     width: 100%;
     height: auto;
-    padding: 20px;
+    flex-direction: column;
     text-align: center;
+    padding: 30px 20px;
   }
 
-  /* Image (Right Container) */
-  .right-container img,
-  .home-img {
+  .content {
+    margin: 0 auto;
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .content .intro,
+  .content .detail {
+    font-size: 1rem;
+  }
+
+  .btn-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .btn-container button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* Social icons */
+  .icons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+
+  .icons .fa-brands {
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  /* Navigation */
+  .navlist {
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+    background: #081b29;
+    position: static;
+    padding: 10px 0;
+  }
+
+  /* Design Circles */
+  .design {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Ensure enough space for circles */
+   z-index: 1; 
+  }
+
+  .design .circle:nth-child(1) {
+    background: linear-gradient(90deg, transparent, #262525 50%);
     width: 180px;
     height: 180px;
-    margin: 20px auto 0;
-    display: block;
     border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 15px #00f7ff;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
   }
 
-  .design {
-    margin-top: 10px;
+ .design .circle:nth-child(2) {
+    background-image: url("images/background.jpg");
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 8px solid #fff;
+    box-shadow:
+      0 0 1rem #fff,
+      inset 0 0 1rem #fff,
+      0 0 2rem #3877ff,
+      inset 0 0 2rem #3877ff,
+      0 0 4rem #3877ff,
+      inset 0 0 4rem #3877ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  .left-container .content {
+    text-align: center;
+    padding-top: 20px;
   }
 
-  .navlist {
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  background: #081b29;
-  position: relative;       /* Fix it on top */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;         /* So it stays on top */
-}
+  .left-container .content .intro,
+  .left-container .content h1 {
+    font-size: 20px;
+  }
 
+  .left-container .content .detail {
+    font-size: 14px;
+    padding: 0 15px;
+  }
 
   /* About Section */
   .about-container {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 40px 20px;
+    gap: 30px;
+    padding: 50px 20px;
   }
 
   .about-img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .about h2 {
+    font-size: 32px;
   }
 
   .about-text {
     font-size: 16px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .about h2 {
-    font-size: 36px;
   }
 
   /* Headings */
-  .heading1, .heading,
-  .contact-text h2,
-  .main-text h2,
-  .sub-title {
-    font-size: 36px;
+  .sub-title, .main-text h2, .heading, .section-title {
+    font-size: 28px;
+    text-align: center;
   }
 
-  /* Skills Section */
-  .Technical-bars .bar {
-    margin: 10px 0;
+  /* Services */
+  .services-list {
+    flex-direction: column;
+    gap: 25px;
   }
 
-  .bar i {
-    font-size: 20px;
+  .service-box {
+    width: 100%;
   }
 
-  .progress-line span::after,
-  .progress-line span::before {
-    font-size: 10px;
-    top: -22px;
-    right: -15px;
+  /* Skills */
+  .details-container {
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .details-box {
+    width: 100%;
   }
 
   .radial-skill-container {
@@ -1144,79 +1239,60 @@ section {
   }
 
   .radial-bars {
+    margin: 20px auto;
     width: 120px;
     height: 120px;
-    margin: 10px auto;
-  }
-
-  /* Container Spacing */
-  .container1 {
-    padding: 10px;
-    margin: 10px auto;
-  }
-
-  /* Services */
-  #services {
-    padding: 40px 10px;
-  }
-
-  .services-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-box {
-    width: 90%;
   }
 
   /* Projects */
-  .details-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .details-box {
-    width: 90%;
-    min-height: auto;
-  }
-
   .portfolio-content {
     grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
   }
 
   .row {
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: 280px;
   }
 
   /* Contact */
   .contact {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 30px;
+    padding: 40px 20px;
   }
 
-  /* Buttons */
-  .btn-container button {
-    width: auto;
-    padding: 10px 20px;
+  .contact-text h2 {
+    font-size: 32px;
   }
 
-  /* Text Content */
-  .content {
-    margin: 0;
-    padding: 20px;
+  .contact-list li {
+    font-size: 16px;
   }
 
-  .content h1 {
-    font-size: 2.5rem;
+  .contact-icons {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .content .detail {
-    font-size: 1.2rem;
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form .send {
+    width: 100%;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  /* Section spacing */
+  .main-text {
+    padding-top: 70px;
+    margin-top: 80px;
+    margin-bottom: 60px;
   }
 }
-
-
-
-
-
