@@ -8,60 +8,64 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
 </head>
 <body>
-  <section id="home">
-  <div class="portfolio-container">
+
+ <!-- Top line: Logo + Theme Button -->
+<div class="top-bar">
+  <div class="logo">Sakshi...!!</div>
+  <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+</div> 
+
     <!-- Navigation Bar -->
-    <ul class="navlist">
+    <ul class="navlist" id="navlist">
   <li><a href="#home" style="--i:1">Home</a></li>
   <li><a href="#about" style="--i:2">About</a></li>
   <li><a href="#services" style="--i:3">Service</a></li>
   <li><a href="#project" style="--i:4">Projects</a></li>
   <li><a href="#contact" style="--i:5">Contact</a></li>
 </ul>
-    
 
-    <!-- Left and Right Container -->
 
-    <div class="left-container"> 
-      <div class="design">
+<div class="cta-nav-buttons">
+  <a href="#contact" class="btn-primary">Hire Me</a>
+  <a href="resume.pdf" class="btn-secondary" download>Download CV</a>
+</div>
+
+
+<!-- Left and Right Container -->
+   <div class="portfolio-container">
+  <div class="left-container"> 
+    <div class="design">
       <div class="circle"></div>
       <div class="circle"></div>
     </div>
+
     <div class="content">
-        <p class="intro">Hi! I Am <span>Sakshi</span></p>
-        <h1>And I'm a <span class="text"></span></h1>
-        <p class="detail">I’m passionate about building creative, responsive, and user-friendly digital solutions that combine design and functionality. I love bringing ideas to life through clean code and engaging user experiences.</p>
-        
+      <p class="intro">Hi! I Am <span>Sakshi</span></p>
+      <h1>And I'm a <span class="text"></span></h1>
+      <p class="detail">
+        I’m passionate about building creative, responsive, and user-friendly digital solutions that combine design and functionality. I love bringing ideas to life through clean code and engaging user experiences.
+      </p>
+
       <div class="icons">
-       <a href="#" onclick="alert('Facebook account not available');">
-        <i class="fa-brands fa-facebook"></i>
-        </a> 
-        <a href="https://wa.me/917020503135" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-        </a>
-        <a href="https://instagram.com/sakshi_chaudhari_patil_" target="blank">
-        <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://t.me/sakshi_chaudhari" target="_blank">
-        <i class="fa-brands fa-telegram"></i>
-        </a>
+        <a href="#" onclick="alert('Facebook account not available');"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://wa.me/917020503135" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://instagram.com/sakshi_chaudhari_patil_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://t.me/sakshi_chaudhari" target="_blank"><i class="fa-brands fa-telegram"></i></a>
       </div>
+
+      <!-- ✅ Button with anchor link -->
       <div class="btn-container">
-          <button>More About Me</button>
-          
-          
-        </div>
+        <a href="#about" class="btn-glow">More About Me</a>
       </div>
     </div>
-
-    <div class="right-container"></div>
-
   </div>
-  </section>
-  <!-- ABOUT SECTION -->
+
+  <div class="right-container"></div>
+</section>
+
+<!-- ✅ ABOUT SECTION -->
 <section class="about" id="about">
   <div class="about-container">
     <div class="about-img">
@@ -70,18 +74,50 @@
     <div class="about-text">
       <h2 class="sub-title animate-heading">About <span>Me</span></h2>
       <p>
-        I am Sakshi, a passionate and dedicated front-end developer with a strong interest in creating beautiful, responsive, and user-friendly web interfaces. With a background in HTML, CSS, JavaScript, and frameworks like React, I enjoy turning ideas into reality through clean and efficient code. I am always eager to learn new technologies and improve my skills to keep up with the fast-evolving tech industry. My goal is to build impactful digital experiences that not only look great but also solve real-world problems. I believe in continuous learning, collaboration, and creativity to grow both personally and professionally in the tech world.
+       Hello! I’m Sakshi, a curious Python & Web Developer who enjoys solving problems and designing beautiful web experiences.
+From writing clean backend APIs with Django/Flask to crafting responsive UIs with HTML, CSS, and JavaScript, I love bridging the gap between technology and user needs.
+My goal is to keep learning new technologies like React, FastAPI, and Cloud Deployment to build modern, scalable web apps.
       </p>
-    
-    <!-- Add the same button again for effect -->
-    <div class="btn-container"> 
-  <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
-    More About Me
-  </button>
-</div>
-</div>
+    </div>
   </div>
-</section> 
+</section>
+
+<div class="about-icons">
+  <div class="icon-wrap">
+    <span class="ring"></span>
+    <i class="fab fa-python icon"></i>
+  </div>
+  
+  <div class="icon-wrap">
+    <span class="ring"></span>
+    <i class="fas fa-code icon"></i>
+  </div>
+</div>
+
+
+
+
+<section id="education" class="education-section">
+  <h2 class="section-title">•Education <span>Details</span></h2>
+
+  <div class="education-container">
+    <div class="education-box">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>Bachelor of Computer Applications</h3>
+      <p><strong>University:</strong> Pune University</p>
+      <p><strong>Year:</strong> 2021 - 2024</p>
+      <p><strong>CGPA:</strong> 7.45</p>
+    </div>
+
+    <div class="education-box">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>Master of Computer Applications</h3>
+      <p><strong>University:</strong> Pune University</p>
+      <p><strong>Year:</strong> 2024 - 2026</p>
+      <p><strong>Status:</strong> Pursuing</p>
+    </div>
+  </div>
+</section>
 
 <!-- Services Section -->
   <section id="services">
@@ -94,8 +130,7 @@
           <i class='bx bx-code' style='color:#00eeff'></i>
           <h2>UI/UX Design</h2>
           <img src="images/uiux-example.png" alt="UI/UX Design Example" class="details-image">
-         <p>I design clean, user-friendly interfaces that enhance user experience through intuitive layouts, consistency, and visual appeal. Using tools like Figma and Adobe XD, I create wireframes and prototypes that solve real user problems. My focus is on usability, accessibility, and crafting meaningful digital experiences across various platforms.
-</p>
+         <p>I design clean, user-friendly interfaces that enhance user experience through intuitive layouts, consistency, and visual appeal. Using tools like Figma and Adobe XD, </p>
  
           <a href="#uiux-details" class="read">Learn more</a>
         </div>
@@ -105,8 +140,7 @@
           <i class='bx bx-crop' style='color:#00eeff'></i>
           <h2>Responsive Web Design</h2>
           <img src="images/Responsive Web Design-example.png" alt="Responsive Web Design" class="details-image">
-      <p>I create responsive websites that adapt seamlessly to all screen sizes—desktops, tablets, and mobiles. Using HTML, CSS, JavaScript, and media queries, I ensure smooth layouts and user-friendly navigation. My designs maintain consistency, accessibility, and performance, delivering optimal user experiences across diverse devices and browsers.
-</p>
+      <p>I create responsive websites that adapt seamlessly to all screen sizes—desktops, tablets, and mobiles. Using HTML, CSS, JavaScript, and media queries.</p>
           <a href="#responsive-details" class="read">Learn more</a>
         </div>
 
@@ -114,8 +148,7 @@
         <div class="service-box">
           <i class='bx bxl-apple' style='color:#00eeff'></i>
           <h2>Frontend Development</h2>
-          <img src="images/Frontend-example.png" alt="Frontend Example" class="details-image">
-        <p>I specialize in frontend development by building visually appealing, responsive, and interactive web interfaces. Using HTML, CSS, JavaScript, and modern frameworks, I convert UI/UX designs into functional websites. I focus on performance, accessibility, and cross-browser compatibility to deliver seamless digital experiences across all devices.</p>
+          <img src="images/Frontend-example.png" alt="Frontend Example" class="details-image"><p>I focus on performance, accessibility, and cross-browser compatibility to deliver seamless digital experiences across all devices.</p>
           <a href="#frontend-details" class="read">Learn more</a>
         </div>
 
@@ -127,87 +160,73 @@
   <section id="uiux-details" class="details-box">
     <h2>UI/UX Design Details</h2>
      <img src="images/uiux-example.png" alt="UI/UX Design Example" class="details-image">
-    <p>I create intuitive and visually appealing user interfaces that enhance user experience. My process includes wireframing, prototyping, and usability testing. I use tools like Figma, Adobe XD, and Canva to design interfaces that are user-centered, accessible, and aesthetically balanced.</p>
+    <p>I create intuitive and visually appealing user interfaces that enhance user experience. My process includes wireframing, prototyping, and usability testing. I use tools like Figma, Adobe XD, and Canva to design interfaces.</p>
   </section>
 
   <section id="responsive-details" class="details-box">
     <h2>Responsive Design Details</h2>
 <img src="images/Responsive Web Design-example.png" alt="Responsive Web Design" class="details-image">
-    <p>I design websites that adapt to all screen sizes—mobile, tablet, and desktop—ensuring seamless user experience. I use HTML, CSS, JavaScript, and media queries. Tools like Chrome DevTools and Bootstrap help me test and implement mobile-first, responsive layouts effectively.</p>
+    <p>I design websites that adapt to all screen sizes—mobile, tablet, and desktop—ensuring seamless user experience. I use HTML, CSS, JavaScript, and media queries.</p>
   </section>
 
   <section id="frontend-details" class="details-box">
     <h2>Frontend Development Details</h2>
     <img src="images/Frontend-example.png" alt="Frontend Example" class="details-image">
-    <p>I build dynamic, responsive web applications using HTML, CSS, JavaScript, and frameworks like React. I focus on clean UI, accessibility, and performance. Tools like VS Code, GitHub, and Chrome DevTools help me develop efficient, maintainable, and scalable frontend code.
-</p>
+    <p>I build dynamic, responsive web applications using HTML, CSS, JavaScript, and frameworks like React. I focus on clean UI, accessibility, and performance. Tools like VS Code, GitHub, and Chrome DevTools.</p>
   </section>
+  </div>
 </div>
 
 <h1 class="section-title animate-heading">My <span>Skills</span></h1>
-<section>
+<section class="section">
   <div class="container1" id="skills">
     <h1 class="heading1 animate-heading">Technical Skills</h1>
     <div class="Technical-bars">
-      <div class="bar"><i style="color: #c95d2e" class='bx bxl-html5'></i>
-        <div class="info">
-          <span>HTML</span>
-        </div>
-        <div class="progress-line html" data-percent="90">
-          <span></span>
-          </div> 
-        </div>
 
-        <div class="bar"><i style="color:#147bbc" class='bx bxl-css3'></i>
-        <div class="info">
-          <span>CSS</span>
-        </div>
-        <div class="progress-line CSS3" data-percent="80">
-          <span></span>
-          </div>  
-        </div>
-
-        <div class="bar"><i style="color: #b0bc1e" class='bx bxl-javascript'></i>
-        <div class="info">
-          <span>JavaScript</span>
-        </div>
-        <div class="progress-line JavaScript" data-percent="75">
-          <span></span>
-          </div>  
-        </div>
-
-        <div class="bar"><i style="color:#c32ec9" class='bx bxl-python'></i>
-        <div class="info">
-          <span>Python</span>
-        </div>
-        <div class="progress-line Python" data-percent="85">
-          <span></span>
-          </div>  
-        </div>
-
-        <div class="bar"><i style="color:#69bcbc" class='bx bxl-react'></i>
-        <div class="info">
-          <span>React</span>
-        </div>
-        <div class="progress-line React" data-percent="65">
-          <span></span>
-          </div>  
-        </div>
+      <div class="bar">
+        <i style="color: #c95d2e" class='bx bxl-html5'></i>
+        <div class="info"><span>HTML</span></div>
+        <div class="progress-line html" data-percent="90"><span></span></div>
       </div>
+
+      <div class="bar">
+        <i style="color:#147bbc" class='bx bxl-css3'></i>
+        <div class="info"><span>CSS</span></div>
+        <div class="progress-line CSS3" data-percent="80"><span></span></div>
+      </div>
+
+      <div class="bar">
+        <i style="color: #b0bc1e" class='bx bxl-javascript'></i>
+        <div class="info"><span>JavaScript</span></div>
+        <div class="progress-line JavaScript" data-percent="75"><span></span></div>
+      </div>
+
+      <div class="bar">
+        <i style="color:#c32ec9" class='bx bxl-python'></i>
+        <div class="info"><span>Python</span></div>
+        <div class="progress-line Python" data-percent="85"><span></span></div>
+      </div>
+
+      <div class="bar">
+        <i style="color:#69bcbc" class='bx bxl-react'></i>
+        <div class="info"><span>React</span></div>
+        <div class="progress-line React" data-percent="65"><span></span></div>
+      </div>
+
     </div>
-
-    <div class="container1">
-      <h1 class="heading1 animate-heading">Professional Skills</h1>
+  </div>
+<div class="container1">
+    <h1 class="heading1 animate-heading">Professional Skills</h1>
     <div class="radial-bars">
-  <svg viewBox="0 0 200 200">
-    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-    <circle class="path path-90" cx="100" cy="100" r="80"></circle>
-  </svg>
-  <div class="percentage" data-percent="90">0%</div>
-  <div class="text">Creativity</div>
-</div>
-
-
+      <!-- SVG + Skill 1 -->
+      <svg viewBox="0 0 200 200">
+        <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+        <circle class="path path-90" cx="100" cy="100" r="80"></circle>
+      </svg>
+      <div class="percentage" data-percent="90">0%</div>
+      <div class="text">Creativity</div>
+    </div>
+  
 <div class="radial-bars">
   <svg viewBox="0 0 200 200">
     <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
@@ -234,12 +253,8 @@
   <div class="percentage" data-percent="85">0%</div>
   <div class="text">Teamwork</div>
 </div>
-  
-    </div>
+</div>
 </section>
-
-
-
 
 <!-- Latest Project Section -->
 <section class="portfolio" id="project">
@@ -252,7 +267,7 @@
   <div class="layer">
     <h5>Heart Disease Risk Assessment</h5>
     <p>This project aims to predict the risk of heart disease using machine learning algorithms...</p>
-    <a href="https://github.com/YourUsername/heart-disease-risk" target="_blank">
+    <a href="https://github.com/sakshi-1234588/heart_disease_project.git" target="_blank">
       <i class='bx bxl-github' style="color: aliceblue;"></i>
     </a>
   </div>
@@ -274,7 +289,7 @@
   <div class="layer">
     <h5>Credit Card Fraud Detection</h5>
     <p>Credit card fraud is a major challenge in the financial industry...</p>
-    <a href="https://github.com/YourUsername/credit-card-fraud-detection" target="_blank">
+    <a href="https://github.com/sakshi-1234588/credit_card_fraud_detection.git" target="_blank">
       <i class='bx bxl-github' style="color: aliceblue;"></i>
     </a>
   </div>
@@ -285,7 +300,7 @@
   <div class="layer">
     <h5>UPI Fraud Detection</h5>
     <p>To build an intelligent system that detects fraudulent UPI transactions in real-time...</p>
-    <a href="https://github.com/YourUsername/upi-fraud-detection" target="_blank">
+    <a href="https://github.com/sakshi-1234588/credit_card_fraud_detection.git" target="_blank">
       <i class='bx bxl-github' style="color: aliceblue;"></i>
     </a>
   </div>
@@ -311,8 +326,7 @@
       <i class='bx bxl-github' style="color: aliceblue;"></i>
     </a>
   </div>
-</div>
-     
+</div>  
 </section>
 
 
@@ -334,11 +348,12 @@ Focused on clean code,
     </div>
 
     <div class="contact-icons">
-      <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+      <a href="#" onclick="alert('Facebook account not available');">
+        <i class='bx bxl-facebook-circle'></i></a>
       <a href="https://github.com/sakshi-1234588" target="_blank">
         <i class='bx bxl-github'></i>
         </a>
-      <a href="https://www.linkedin.com/in/sakshi chaudhari" target="_blank">
+      <a href="https://www.linkedin.com/in/sakshi-chaudhari" target="_blank">
         <i class='bx bxl-linkedin'></i>
       </a>
       <a href="https://instagram.com/sakshi_chaudhari_patil_" target="_blank">
@@ -358,11 +373,20 @@ Focused on clean code,
   
   <!-- Optional: redirect to thank you page -->
   <input type="hidden" name="_next" value="https://your-website.com/thankyou.html">
-
-  
 </form>
   </div>
 </section>
+
+<footer class="footer">
+  <p>© 2025 Sakshi Portfolio. All rights reserved.</p>
+  <div class="footer-icons">
+    <a href="#" onclick="alert('Facebook account not available');"><i class='bx bxl-facebook'></i></a>
+    <a href="https://github.com/sakshi-1234588" target="_blank"><i class='bx bxl-github'></i></a>
+    <a href="https://www.linkedin.com/in/sakshi-chaudhari" target="_blank"><i class='bx bxl-linkedin'></i></a>
+    <a href="https://instagram.com/sakshi_chaudhari_patil_" target="_blank"><i class='bx bxl-instagram'></i></a>
+  </div>
+</footer>
+
 
   <!-- Optional JavaScript -->
   <script src="main.js"></script>
