@@ -124,3 +124,19 @@ toggle.addEventListener('click', () => {
   // Change button icon
   toggle.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
 });
+
+
+const menuBtn = document.getElementById('menu-btn');
+const overlayMenu = document.getElementById('overlay-menu');
+
+menuBtn.addEventListener('click', () => {
+  overlayMenu.style.display = 'flex'; // show overlay
+});
+
+// Click outside links to close
+overlayMenu.addEventListener('click', (e) => {
+  if (e.target === overlayMenu) {
+    overlayMenu.style.display = 'none';
+  }
+});
+

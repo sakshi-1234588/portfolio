@@ -17,20 +17,24 @@
   <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
 </div> 
 
-    <!-- Navigation Bar -->
-    <ul class="navlist" id="navlist">
-  <li><a href="#home" style="--i:1">Home</a></li>
-  <li><a href="#about" style="--i:2">About</a></li>
-  <li><a href="#services" style="--i:3">Service</a></li>
-  <li><a href="#project" style="--i:4">Projects</a></li>
-  <li><a href="#contact" style="--i:5">Contact</a></li>
-</ul>
 
+<!-- Three-dot button fixed top-right -->
+<button id="menu-btn" class="three-dot-btn">⋮</button>
 
-<div class="cta-nav-buttons">
-  <a href="#contact" class="btn-primary">Hire Me</a>
-  <a href="resume.pdf" class="btn-secondary" download>Download CV</a>
+<!-- Full-screen overlay menu -->
+<div id="overlay-menu" class="overlay-menu">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </div>
+
+
+
+
 
 
 <!-- Left and Right Container -->
@@ -47,6 +51,11 @@
       <p class="detail">
         I’m passionate about building creative, responsive, and user-friendly digital solutions that combine design and functionality. I love bringing ideas to life through clean code and engaging user experiences.
       </p>
+      
+      <div class="cta-nav-buttons">
+  <a href="#contact" class="btn-primary">Hire Me</a>
+  <a href="resume.pdf" class="btn-secondary" download>Download CV</a>
+</div>
 
       <div class="icons">
         <a href="#" onclick="alert('Facebook account not available');"><i class="fa-brands fa-facebook"></i></a>
@@ -54,13 +63,11 @@
         <a href="https://instagram.com/sakshi_chaudhari_patil_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         <a href="https://t.me/sakshi_chaudhari" target="_blank"><i class="fa-brands fa-telegram"></i></a>
       </div>
-
-      <!-- ✅ Button with anchor link -->
-      <div class="btn-container">
-        <a href="#about" class="btn-glow">More About Me</a>
+</div>
       </div>
     </div>
   </div>
+
 
   <div class="right-container"></div>
 </section>
@@ -81,6 +88,7 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
     </div>
   </div>
 </section>
+
 
 <div class="about-icons">
   <div class="icon-wrap">
@@ -120,62 +128,86 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
 </section>
 
 <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <h1 class="sub-title animate-heading">My <span>Services</span></h1>
-      <div class="services-list">
+<section id="services">
+  <div class="container">
+    <h1 class="sub-title animate-heading">My <span>Services</span></h1>
+    <div class="services-list">
 
-        <!-- UI/UX -->
-        <div class="service-box">
-          <i class='bx bx-code' style='color:#00eeff'></i>
-          <h2>UI/UX Design</h2>
-          <img src="images/uiux-example.png" alt="UI/UX Design Example" class="details-image">
-         <p>I design clean, user-friendly interfaces that enhance user experience through intuitive layouts, consistency, and visual appeal. Using tools like Figma and Adobe XD, </p>
- 
-          <a href="#uiux-details" class="read">Learn more</a>
-        </div>
-
-        <!-- Responsive Web Design -->
-        <div class="service-box">
-          <i class='bx bx-crop' style='color:#00eeff'></i>
-          <h2>Responsive Web Design</h2>
-          <img src="images/Responsive Web Design-example.png" alt="Responsive Web Design" class="details-image">
-      <p>I create responsive websites that adapt seamlessly to all screen sizes—desktops, tablets, and mobiles. Using HTML, CSS, JavaScript, and media queries.</p>
-          <a href="#responsive-details" class="read">Learn more</a>
-        </div>
-
-        <!-- Frontend Dev -->
-        <div class="service-box">
-          <i class='bx bxl-apple' style='color:#00eeff'></i>
-          <h2>Frontend Development</h2>
-          <img src="images/Frontend-example.png" alt="Frontend Example" class="details-image"><p>I focus on performance, accessibility, and cross-browser compatibility to deliver seamless digital experiences across all devices.</p>
-          <a href="#frontend-details" class="read">Learn more</a>
-        </div>
-
+      <!-- Web Development -->
+      <div class="service-box">
+        <i class="fa fa-code" aria-hidden="true" style="color: aqua;"></i>
+        <h2>1️⃣ Web Development (Python/Django/Flask)</h2>
+        <img src="images/frontend-example.png" alt="Web Development Example" class="details-image">
+        <p>
+          I build simple and responsive websites and REST APIs using Python frameworks like Django and Flask.<br>
+          ✅ Basic website creation (portfolio, blog, small business site)<br>
+          ✅ Backend development with database (MySQL/PostgreSQL)
+        </p>
+        <a href="#web-details" class="read">Learn more</a>
       </div>
+
+      <!-- Data Analysis & Visualization -->
+      <div class="service-box">
+        <i class="fa fa-line-chart" aria-hidden="true" style="color:#00eeff;"></i>
+        <h2>2️⃣ Data Analysis & Visualization</h2>
+       <img src="images/visualization-example.png" alt="Data Visualization Example" class="details-image">
+        <p>
+          I work with data cleaning, analysis, and visualization using Python libraries like Pandas, NumPy, and Matplotlib.<br>
+          ✅ Clean and organize raw data<br>
+          ✅ Create charts, graphs, and dashboards
+        </p>
+        <a href="#data-details" class="read">Learn more</a>
+      </div>
+
+      <!-- Automation & Scripting -->
+      <div class="service-box">
+        <i class="fas fa-robot" style="color:#00eeff;"></i>
+        <h2>3️⃣ Automation & Scripting</h2>
+        <img src="images/automation-example.png" alt="Automation Example" class="details-image">
+        <p>
+          I write custom Python scripts to automate daily tasks and save time.<br>
+          ✅ Web scraping to collect data<br>
+          ✅ Excel/CSV automation
+        </p>
+        <a href="#automation-details" class="read">Learn more</a>
+      </div>
+
     </div>
-  </section>
-
-  <div class="details-container">
-  <section id="uiux-details" class="details-box">
-    <h2>UI/UX Design Details</h2>
-     <img src="images/uiux-example.png" alt="UI/UX Design Example" class="details-image">
-    <p>I create intuitive and visually appealing user interfaces that enhance user experience. My process includes wireframing, prototyping, and usability testing. I use tools like Figma, Adobe XD, and Canva to design interfaces.</p>
-  </section>
-
-  <section id="responsive-details" class="details-box">
-    <h2>Responsive Design Details</h2>
-<img src="images/Responsive Web Design-example.png" alt="Responsive Web Design" class="details-image">
-    <p>I design websites that adapt to all screen sizes—mobile, tablet, and desktop—ensuring seamless user experience. I use HTML, CSS, JavaScript, and media queries.</p>
-  </section>
-
-  <section id="frontend-details" class="details-box">
-    <h2>Frontend Development Details</h2>
-    <img src="images/Frontend-example.png" alt="Frontend Example" class="details-image">
-    <p>I build dynamic, responsive web applications using HTML, CSS, JavaScript, and frameworks like React. I focus on clean UI, accessibility, and performance. Tools like VS Code, GitHub, and Chrome DevTools.</p>
-  </section>
   </div>
+</section>
+
+<!-- Service Details Sections -->
+<div class="details-container">
+
+  <section id="web-details" class="details-box">
+    <h2>Web Development Details</h2>
+    <img src="images/web2.png" alt="Web Development Example" class="details-image">
+    <p>
+      I create modern, responsive, and secure web applications using Python and powerful frameworks like Django and Flask.
+      My service focuses on building clean, efficient, and user-friendly websites that work on all devices.
+    </p>
+  </section>
+
+  <section id="data-details" class="details-box">
+    <h2>Data Analysis & Visualization Details</h2>
+    <img src="images/visualization 2.png" alt="Data Visualization Example" class="details-image">
+    <p>
+      I help transform raw data into meaningful insights using Python’s powerful data libraries.
+      My goal is to clean, analyze, and visually present data so that patterns, trends, and key information become easy to understand.
+    </p>
+  </section>
+
+  <section id="automation-details" class="details-box">
+    <h2>Automation & Scripting Details</h2>
+    <img src="images/automation2.png" alt="Automation Example" class="details-image">
+    <p>
+      I develop custom Python scripts to automate repetitive tasks and make everyday processes faster, more accurate, and time-saving.
+      Whether it’s collecting data, managing files, or handling routine operations, my automation solutions help reduce manual work.
+    </p>
+  </section>
+
 </div>
+
 
 <h1 class="section-title animate-heading">My <span>Skills</span></h1>
 <section class="section">
