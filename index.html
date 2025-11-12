@@ -11,22 +11,24 @@
 </head>
 <body>
 
- <!-- Top line: Logo + Theme Button -->
+<!-- 🔹 Top Bar -->
 <div class="top-bar">
   <div class="logo">Sakshi...!!</div>
-  <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
-</div> 
+  
+  <div class="controls">
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌙</button>
+    <button id="menu-btn" class="three-dot-btn" aria-label="Menu">⋮</button>
+  </div>
+</div>
 
 
-<!-- Three-dot button fixed top-right -->
-<button id="menu-btn" class="three-dot-btn">⋮</button>
-
-<!-- Full-screen overlay menu -->
+<!-- 🔹 Overlay Menu -->
 <div id="overlay-menu" class="overlay-menu">
+  <span class="close-btn">&times;</span> <!-- Close button -->
   <ul>
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
+    <li><a href="#project">Projects</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -35,39 +37,37 @@
 
 
 
-
-
 <!-- Left and Right Container -->
-   <div class="portfolio-container">
-  <div class="left-container"> 
-    <div class="design">
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
-
-    <div class="content">
-      <p class="intro">Hi! I Am <span>Sakshi</span></p>
-      <h1>And I'm a <span class="text"></span></h1>
-      <p class="detail">
-        I’m passionate about building creative, responsive, and user-friendly digital solutions that combine design and functionality. I love bringing ideas to life through clean code and engaging user experiences.
-      </p>
-      
-      <div class="cta-nav-buttons">
-  <a href="#contact" class="btn-primary">Hire Me</a>
-  <a href="resume.pdf" class="btn-secondary" download>Download CV</a>
-</div>
-
-      <div class="icons">
-        <a href="#" onclick="alert('Facebook account not available');"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://wa.me/917020503135" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://instagram.com/sakshi_chaudhari_patil_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://t.me/sakshi_chaudhari" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+<section id="home">
+  <div class="portfolio-container">
+    <div class="left-container">
+      <div class="design">
+        <img src="images/background.jpg" alt="Profile Photo" class="profile">
       </div>
-</div>
+
+      <div class="content">
+        <p class="intro">Hi! I Am <span>Sakshi</span></p>
+        <h1>And I'm a <span class="text"></span></h1>
+        <p class="detail">
+          I’m passionate about building creative, responsive, and user-friendly digital solutions that combine design and functionality. 
+          I love bringing ideas to life through clean code and engaging user experiences.
+        </p>
+
+        <div class="cta-nav-buttons">
+          <a href="#contact" class="btn-primary">Hire Me</a>
+          <a href="resume.pdf" class="btn-secondary" download>Download CV</a>
+        </div>
+
+        <div class="icons">
+          <a href="#" onclick="alert('Facebook account not available');"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://wa.me/917020503135" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://instagram.com/sakshi_chaudhari_patil_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me/sakshi_chaudhari" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        </div>
       </div>
     </div>
   </div>
-
+</section>
 
   <div class="right-container"></div>
 </section>
@@ -89,7 +89,6 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
   </div>
 </section>
 
-
 <div class="about-icons">
   <div class="icon-wrap">
     <span class="ring"></span>
@@ -101,8 +100,6 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
     <i class="fas fa-code icon"></i>
   </div>
 </div>
-
-
 
 
 <section id="education" class="education-section">
@@ -171,7 +168,6 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
         </p>
         <a href="#automation-details" class="read">Learn more</a>
       </div>
-
     </div>
   </div>
 </section>
@@ -181,16 +177,15 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
 
   <section id="web-details" class="details-box">
     <h2>Web Development Details</h2>
-    <img src="images/project/webdev.png" alt="Web Development Example" class="details-image">
+    <img src="images/project/website.jpg" alt="Web Development Example" class="details-image">
     <p>
       I create modern, responsive, and secure web applications using Python and powerful frameworks like Django and Flask.
       My service focuses on building clean, efficient, and user-friendly websites that work on all devices.
     </p>
   </section>
-
   <section id="data-details" class="details-box">
     <h2>Data Analysis & Visualization Details</h2>
-    <img src="images/project/visualization.jpeg" alt="Data Visualization Example" class="details-image">
+    <img src="images/project/data2.jpg" alt="Data Visualization Example" class="details-image">
     <p>
       I help transform raw data into meaningful insights using Python’s powerful data libraries.
       My goal is to clean, analyze, and visually present data so that patterns, trends, and key information become easy to understand.
@@ -205,10 +200,7 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
       Whether it’s collecting data, managing files, or handling routine operations, my automation solutions help reduce manual work.
     </p>
   </section>
-
 </div>
-
-
 <h1 class="section-title animate-heading">My <span>Skills</span></h1>
 <section class="section">
   <div class="container1" id="skills">
@@ -220,7 +212,6 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
         <div class="info"><span>HTML</span></div>
         <div class="progress-line html" data-percent="90"><span></span></div>
       </div>
-
       <div class="bar">
         <i style="color:#147bbc" class='bx bxl-css3'></i>
         <div class="info"><span>CSS</span></div>
@@ -295,81 +286,55 @@ My goal is to keep learning new technologies like React, FastAPI, and Cloud Depl
     <div class="portfolio-content">
 
  <div class="row">
-  <img src="images/project/heart.jpg" alt="">
+  <img src="images/project/hangman game" alt="Hangman Game">
   <div class="layer">
-    <h5>Heart Disease Risk Assessment</h5>
-    <p>This project aims to predict the risk of heart disease using machine learning algorithms...</p>
-    <a href="https://github.com/sakshi-1234588/heart_disease_project.git" target="_blank">
-      <i class='bx bxl-github' style="color: aliceblue;"></i>
+    <h5>Hangman Game</h5>
+    <p>A simple Hangman game built with Flask, playable online via render.</p>
+    <a href="https://hangman-game-ftk8.onrender.com/" target="_blank">
+      <i class='bx bx-link' style="color: aliceblue;"></i> Live Demo
     </a>
   </div>
 </div>
 
 <div class="row">
-  <img src="images/project/web.jpg" alt="">
+  <img src="images/project/heartdisease.jpg" alt="">
   <div class="layer">
-    <h5>Web Design</h5>
-    <p>Designed and developed a modern, responsive portfolio website to showcase projects...</p>
-    <a href="https://github.com/YourUsername/portfolio-website" target="_blank">
-      <i class='bx bxl-github' style="color: aliceblue;"></i>
+    <h5>heart-disease-app</h5>
+    <p>"Heart Disease Risk Assessment app predicts risk using a trained model in Flask."</p>
+    <a href="https://heart-disease-app-13.onrender.com" target="_blank">
+      <i class='bx bx-link' style="color: aliceblue;"></i>Live Demo
     </a>
   </div>
 </div>
 
 <div class="row">
-  <img src="images/project/credit.jpg" alt="">
+  <img src="images/project/stocktracker.jpg" alt="">
   <div class="layer">
-    <h5>Credit Card Fraud Detection</h5>
-    <p>Credit card fraud is a major challenge in the financial industry...</p>
-    <a href="https://github.com/sakshi-1234588/credit_card_fraud_detection.git" target="_blank">
-      <i class='bx bxl-github' style="color: aliceblue;"></i>
+    <h5>StockPortfolioTracker</h5>
+    <p>"Stock Portfolio Tracker is a web app built with Streamlit to track and calculate investments.</p>
+    <a href="https://stockportfoliotracker-4.onrender.com" target="_blank">
+      <i class='bx bx-link' style="color: aliceblue;"></i>Live Demo
     </a>
   </div>
 </div>
 
 <div class="row">
-  <img src="images/project/upi.jpg" alt="">
+  <img src="images/project/selfportfolio.jpg" alt="">
   <div class="layer">
-    <h5>UPI Fraud Detection</h5>
-    <p>To build an intelligent system that detects fraudulent UPI transactions in real-time...</p>
-    <a href="https://github.com/sakshi-1234588/credit_card_fraud_detection.git" target="_blank">
-      <i class='bx bxl-github' style="color: aliceblue;"></i>
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <img src="images/project/portfolio.jpg" alt="">
-  <div class="layer">
-    <h5>Personal Portfolio Website</h5>
-    <p>To design and develop a fully responsive personal website to showcase professional skills...</p>
-    <a href="https://github.com/YourUsername/portfolio" target="_blank">
-      <i class='bx bxl-github' style="color: aliceblue;"></i>
-    </a>
-  </div>
-</div>
-
-<div class="row">
-  <img src="images/project/crop.jpg" alt="">
-  <div class="layer">
-    <h5>Crop Disease Identification</h5>
-    <p>This project aims to automate crop disease detection using computer vision...</p>
-    <a href="https://github.com/YourUsername/crop-disease-detection" target="_blank">
-      <i class='bx bxl-github' style="color: aliceblue;"></i>
+    <h5>MyPortfolio</h5>
+    <p>"My Portfolio is a personal showcase website built with HTML, CSS, and JavaScript."</p>
+    <a href="https://heart-disease-app-13.onrender.com" target="_blank">
+      <i class='bx bx-link' style="color: aliceblue;"></i>Live Demo
     </a>
   </div>
 </div>  
 </section>
-
-
 <section class="contact" id="contact">
   <div class="contact-text">
     <h2 class="sub-title animate-heading">Contact <span>Me</span></h2>
     <h4>Let's Work Together</h4>
     <p>Passionate about building impactful digital solutions
-
 Strong foundation in Machine Learning, Web Development, and Data Analytics
-
 Focused on clean code,
  user-friendly design,
  and real-world results</p>
@@ -378,7 +343,6 @@ Focused on clean code,
       <li><i class='bx bxs-send'></i> contact@gmail.com</li>
       <li><i class='bx bxs-phone'></i> 1234567890</li>
     </div>
-
     <div class="contact-icons">
       <a href="#" onclick="alert('Facebook account not available');">
         <i class='bx bxl-facebook-circle'></i></a>
@@ -393,7 +357,6 @@ Focused on clean code,
       </a>
     </div>
   </div>
-
   <div class="contact-form">
     <form action="https://formsubmit.co/sakshichaudhari9284@gmail.com" method="POST">
       <input type="text" placeholder="Name" required>
@@ -408,7 +371,6 @@ Focused on clean code,
 </form>
   </div>
 </section>
-
 <footer class="footer">
   <p>© 2025 Sakshi Portfolio. All rights reserved.</p>
   <div class="footer-icons">
@@ -418,8 +380,6 @@ Focused on clean code,
     <a href="https://instagram.com/sakshi_chaudhari_patil_" target="_blank"><i class='bx bxl-instagram'></i></a>
   </div>
 </footer>
-
-
   <!-- Optional JavaScript -->
   <script src="main.js"></script>
 </body>
