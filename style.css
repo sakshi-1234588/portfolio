@@ -7,9 +7,10 @@
   font-family: 'Poppins', sans-serif;
 }
 body {
-  background-color: #081b29;  
+  background-color: #010e16; 
   color: #fff;             
 }
+
 
 .portfolio-container {
   min-height: 100vh;
@@ -17,8 +18,8 @@ body {
   display: flex;
   position: relative;
   flex-wrap: wrap;
-  margin-top: 30px;
-  background-color: #001f2f;
+  margin-top: 20px;
+  background-color: transparent;
 }
 
 /* Top bar: Logo left, buttons right */
@@ -30,6 +31,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  height: 70px;
   background-color: #001f2f;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -58,7 +60,7 @@ body {
   cursor: pointer;
   color: #00cccc;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  transform: none; /* prevents scaling */
+  transform: none; 
 }
 
 /* Hover effect */
@@ -69,8 +71,6 @@ body {
 }
 
 
-
-
 /* 🔹 Overlay Menu Design */
 .overlay-menu {
   position: fixed;
@@ -78,11 +78,11 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #010e16; /* transparent black bg */
-  backdrop-filter: blur(5px); /* subtle blur for depth */
+  background: #010e16; 
+  backdrop-filter: blur(5px); 
   display: none;
   justify-content: center;
-  align-items: flex-start; /* left aligned */
+  align-items: flex-start; 
   flex-direction: column;
   padding-left: 60px;
   z-index: 999;
@@ -143,7 +143,7 @@ body {
   transform-origin: center;
   width: 60%;
   height: 3px;
-  background: #00bcd4; /* cyan accent line */
+  background: #00bcd4; 
   transition: transform 0.3s ease;
 }
 
@@ -161,7 +161,7 @@ body {
 /* 🔹 Close Button */
 .overlay-menu .close-btn {
   position: absolute;
-  top: 45px;
+  top: 59px;
   right: 10px;
   font-size: 2.5rem;
   color: #fff;
@@ -175,14 +175,11 @@ body {
   transform: scale(1.2);
 }
 
-
-
-
-/* ---------------- Details Container Light Mode (Original Portfolio) ---------------- */
+/*Details Container Light Mode (Original Portfolio) */
 .details-container {
-  background-color: rgba(245, 245, 245, 1);  /* subtle light gray, white nahi */
-  color: #111111;                             /* dark readable text */
-  font-family: 'Poppins', sans-serif;        /* consistent font */
+  background-color: rgba(245, 245, 245, 1);  
+  color: #111111;                             
+  font-family: 'Poppins', sans-serif;       
   font-size: 16px;
   line-height: 1.6;
   border-radius: 15px;
@@ -231,24 +228,70 @@ body {
   color: inherit;
   font-family: inherit;
 }
-
-
 /* ---------------- Dark Mode ---------------- */
 body.dark-theme {
-  background-color: #1a1a2e;  /* main dark portfolio color */
-  color: #ffffff;             /* text white for contrast */
+  background-color: #1a1a2e;  
+  color: #ffffff;             
   transition: all 0.3s ease;
 }
+
+
+/* Fix: Remove box background in dark mode */
+body.dark-theme .portfolio-container,
+body.dark-theme .left-container,
+body.dark-theme .right-container,
+body.dark-theme .content {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+
+body:not(.dark-theme) .details-container,
+body:not(.dark-theme) .portfolio-container,
+body:not(.dark-theme) .left-container,
+body:not(.dark-theme) .right-container {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+ody.dark-theme .navbar {
+  background: #1a1a2e;
+  height: 70px; /* same height */
+  padding: 0 2rem;
+}
+
+body.light-theme .navbar {
+  background: #ffffff;
+  height: 70px; /* same height */
+  padding: 0 2rem;
+}
+
+.header-container {
+  padding: 1rem 2rem;
+}
+
+body.dark-theme .header-container,
+body.light-theme .header-container {
+  padding: 1rem 2rem; /* same padding */
+}
+
 
 /* Main elements */
 body.dark-theme .top-bar,
-body.dark-theme .navbar,
-body.dark-theme section,
+body.dark-theme .section,
+body.dark-theme .overlay-menu,
+body.dark-theme .content,
+body.dark-theme .design,
+body.dark-theme .details-container,
 body.dark-theme footer {
-  background-color: #1a1a2e; /* uniform dark background */
+  background-color: #1a1a2e;
   color: #ffffff;
   transition: all 0.3s ease;
 }
+
 
 /* Links & Logo */
 body.dark-theme .navlist li a,
@@ -259,15 +302,15 @@ body.dark-theme .logo {
 
 body.dark-theme .navlist li a:hover,
 body.dark-theme .logo:hover {
-  color: #00cccc; /* accent color on hover */
+  color: #00cccc; 
 }
 
 /* Buttons */
 body.dark-theme button,
 body.dark-theme .btn-primary,
 body.dark-theme .btn-secondary {
-  background: #00cccc;  /* accent button color */
-  color: #1a1a2e;       /* dark text on buttons for contrast */
+  background: #00cccc;  
+  color: #1a1a2e;       
   border: none;
   border-radius: 25px;
   padding: 10px 25px;
@@ -280,7 +323,7 @@ body.dark-theme .btn-secondary {
 body.dark-theme button:hover,
 body.dark-theme .btn-primary:hover,
 body.dark-theme .btn-secondary:hover {
-  background: #00b3b3; /* slightly darker on hover */
+  background: #00b3b3; 
   box-shadow: 0 0 15px rgba(0, 204, 204, 0.6);
 }
 
@@ -316,16 +359,19 @@ body.dark-theme textarea:focus {
   outline: none;
 }
 
+
 /* Cards / Boxes */
 body.dark-theme .card,
 body.dark-theme .project-box,
 body.dark-theme .service-box {
-  background: #2a2a3e;
+  background: rgba(26, 26, 46, 0.85); /* match with dark background */
   color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.08); /* subtle cyan glow */
   transition: all 0.3s ease;
 }
+
+
 
 body.dark-theme .card:hover,
 body.dark-theme .project-box:hover,
@@ -349,22 +395,15 @@ body.dark-theme * {
 }
 
 section {
-  scroll-margin-top: 60px; /* top-bar height इतके */
+  scroll-margin-top: 60px; 
 }
 #home, #about, #projects, #services, #contact {
-  scroll-margin-top: 60px; /* adjust according to your top-bar */
-}
-
-
-
-/* Navbar below */
-.navbar {
-  background-color: #081b29;
+  scroll-margin-top: 60px; 
 }
 
 .navlist {
   display: flex;
-  justify-content: center;   /* horizontal center */
+  justify-content: center;  
   gap: 25px;
   list-style: none;
   margin: 0;
@@ -384,10 +423,10 @@ section {
 }
 
 .navlist {
-  display: flex;              /* horizontal layout */
-  gap: 25px;                  /* space between nav items */
-  list-style: none;           /* remove default bullets */
-  align-items: center;        /* vertical center with nav bar height */
+  display: flex;             
+  gap: 25px;                 
+  list-style: none;           
+  align-items: center;        
   margin: 0;
   padding: 0;
 }
@@ -427,25 +466,25 @@ section {
 
 
 .cta-nav-buttons {
-  margin-top: 10px;        /* navlist खाली gap */
+  margin-top: 10px;        
   display: flex;
   gap: 15px;
-  justify-content: center; /* center align */
+  justify-content: center; 
   padding: 10px 0;
 }
 
 .btn-primary,
 .btn-secondary {
-  padding: 10px 25px;       /* same padding */
+  padding: 10px 25px;       
   font-size: 0.95rem;
-  border-radius: 25px;      /* same roundness */
+  border-radius: 25px;     
   text-decoration: none;
-  font-weight: 600;          /* same weight */
+  font-weight: 600;          
   transition: all 0.3s ease;
   background: linear-gradient(45deg, #00ffff, #00b3b3);
   color: #081b29;
   box-shadow: 0 0 10px rgba(0,255,255,0.4);
-  border: none;             /* remove secondary border */
+  border: none;            
 }
 
 .btn-primary:hover,
@@ -455,26 +494,29 @@ section {
   color: #081b29;
 }
 
-
-.left-container, .right-container {
+/* Common Container Settings */
+.left-container,
+.right-container {
   height: 100vh;
   display: flex;
   align-items: center;
-} 
+}
 
+/* 🩶 Left Section – Clean and Transparent */
 .left-container {
   width: 70%;
   padding-left: 3rem;
-   background-color: #001f2f;
+  background: transparent;  
 }
 
-
+/* 🎨 Right Section – Hidden for now */
 .right-container {
-  background: linear-gradient(-45deg,#3877ff, #262525 70%);
+  background: linear-gradient(-45deg, #3877ff, #262525 70%);
   width: 30%;
-   display: none;
+  display: none;
 }
 
+/* 🔗 Social Icons */
 .icons {
   display: flex;
   justify-content: center;
@@ -508,57 +550,96 @@ section {
   margin: 30px 15px 30px 0;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
-  animation-delay:.7s;
+  animation-delay: .7s;
 }
 
 .icons .fa-brands:hover {
   background: #5DB9EE;
   color: #081b29;
   box-shadow: 0 0 5px cyan,
-  0 0 25px cyan, 0 0 50px cyan,
-  0 0 100px cyan, 0 0 200px cyan;
+              0 0 25px cyan,
+              0 0 50px cyan,
+              0 0 100px cyan,
+              0 0 200px cyan;
 }
 
+/* 🧠 Content Section */
 .content {
   margin-left: 4rem;
-   background-color: transparent;
+  background: transparent;
 }
 
+/* Intro Text */
 .content .intro {
   font-size: 1.5rem;
   color: #FFF;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
-  animation-delay:.7s;
+  animation-delay: .7s;
 }
 
 .content .intro span {
   color: #5DB9EE;
 }
 
+/* Heading */
 .content h1 {
   font-size: 3.5rem;
   color: #fff;
   opacity: 0;
   animation: slideBottom 1s ease forwards;
-  animation-delay:.7s;
+  animation-delay: .7s;
 }
+
 .content h1 span {
   color: #5DB9EE;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
-
+/* Paragraph Detail */
 .content .detail {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #FFF;
   max-width: 38rem;
   margin: 1.1rem 0 3rem 0;
-  line-height: 2rem;
+  line-height: 1.8rem;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
-  animation-delay:.7s;
+  animation-delay: .7s;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .left-container {
+    width: 100%;
+    padding-left: 1.5rem;
+  }
+
+  .content {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content .detail {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .icons {
+    gap: 10px;
+  }
+
+  .icons .fa-brands {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin: 20px 10px;
+  }
 }
 
 
@@ -610,7 +691,7 @@ section {
   position: relative;
   width: 100%;
   height: auto;
-   background-color: #001f2f;
+  background: transparent;
 }
 .profile {
   width: 300px;      
@@ -722,14 +803,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;               /* pointer cursor like button */
+  cursor: pointer;               
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 50%;            /* circular effect */
+  border-radius: 50%;           
 }
 
 .icon-wrap:hover {
-  transform: scale(1.1);         /* slightly bigger on hover */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* button-like shadow */
+  transform: scale(1.1);         
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
 }
 
 .ring {
@@ -744,13 +825,13 @@ section {
   inset: 6px;
   border-radius: 50%;
   border: 6px solid rgba(0,0,0,0.1);
-  border-top-color: #3776AB;      /* colored segment */
+  border-top-color: #3776AB;      
   animation: ring-spin 4s linear infinite;
-  transition: border-top-color 0.3s ease; /* smooth color change */
+  transition: border-top-color 0.3s ease; 
 }
 
 .icon-wrap:hover .ring::after {
-  border-top-color: #FFD43B;      /* highlight color on hover */
+  border-top-color: #FFD43B;      
 }
 
 .icon {
@@ -762,7 +843,7 @@ section {
 }
 
 .icon-wrap:hover .icon {
-  color: #00f7ff;                 /* icon color changes like button */
+  color: #00f7ff;                 
 }
 
 @keyframes ring-spin {
@@ -896,8 +977,8 @@ section {
   background-color: #0c1f31;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  padding: 15px 20px;       /* corrected padding */
-  width: 300px;             /* fixed width */
+  padding: 15px 20px;       
+  width: 300px;             
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
@@ -951,9 +1032,9 @@ section {
 
 /* Image inside card */
 .service-box .details-image {
-  width: 100%;        /* card width प्रमाणे stretch */
-  max-height: 180px;  /* card height control */
-  object-fit: cover;  /* distorted न होऊ देता crop */
+  width: 100%;        
+  max-height: 180px;  
+  object-fit: cover;  
   border-radius: 15px;
   margin-bottom: 15px;
 }
@@ -990,7 +1071,7 @@ section {
   }
 
   .service-box .details-image {
-    max-height: 150px; /* mobile साठी slightly smaller */
+    max-height: 150px; 
   }
 }
 
@@ -1069,7 +1150,7 @@ section {
   }
 
   .details-box {
-    width: 90%;           /* full width on small screens */
+    width: 90%;          
     padding: 12px 10px;
     min-height: auto;
   }
@@ -1172,8 +1253,8 @@ section {
   background-color: #0ef;
   position: absolute;
   border-radius: 10px;
-  width: 0; /* Start with 0 width */
-  transition: width 2s ease-in-out; /* Animate width */
+  width: 0; 
+  transition: width 2s ease-in-out; 
 }
 
  .progress-line.html span {
@@ -1201,7 +1282,7 @@ section {
 
 
 .radial-bars {
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr); 
   position: relative;
   width: 160px;
   height: 160px;
@@ -1316,17 +1397,17 @@ section {
 }
 
 :root {
-  --bg-color: #222; /* तू आधी कुठेही bg-color वापरतोयस म्हणून default दिलं */
+  --bg-color: #222; 
 }
 
 @media (max-width: 768px) {
   .container1 {
-    margin-bottom: 10px !important;  /* कमी करून space घटवा */
+    margin-bottom: 10px !important;  
     padding-bottom: 0 !important;
   }
 
   #project, .portfolio {
-    margin-top: 0 !important;      /* heading जवळ आणण्यासाठी */
+    margin-top: 0 !important;      
     padding-top: 0 !important;
   }
 
@@ -1347,16 +1428,16 @@ section {
 
 /*letest project */
 .main-text {
-  padding: 20px 0;       /* Top आणि bottom दोन्हीला same padding */
-  margin: 30px;        /* Auto horizontal margin for center */
-  text-align: center;    /* Center align heading text */
+  padding: 20px 0;       
+  margin: 30px;        
+  text-align: center;   
 }
 
 .main-text h2 {
   font-size: 50px;
   line-height: 1.2;
-  margin: 30;             /* Top आणि bottom margin reset */
-  padding: 30px 0;       /* Top आणि bottom padding देऊन spacing control */
+  margin: 30;             
+  padding: 30px 0;       /
 }
 
 
@@ -1628,8 +1709,6 @@ section {
     margin: 5px 0 !important;
     padding: 0 !important;
   }
-
-
   .contact-icons {
     justify-content: center;
     display: flex;
@@ -1639,8 +1718,6 @@ section {
   .contact-form {
     padding: 10px;
   }
-
-
 
 
 /* Clean Footer Design */
@@ -1810,7 +1887,7 @@ section {
   }
 
   .right-container {
-    display: none; /* Optional if it’s decorative */
+    display: none;
   }
 }
 
@@ -1878,7 +1955,7 @@ section {
   .design {
     position: relative;
     width: 100%;
-    height: 250px; /* Ensure enough space for circles */
+    height: 250px; 
    z-index: 1; 
   }
 
@@ -1916,8 +1993,6 @@ section {
     transform: translateX(-50%);
     z-index: -1;
   }
-
-
 
   .left-container .content {
     text-align: center;
