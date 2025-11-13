@@ -1077,6 +1077,17 @@ section {
   }
 }
 
+
+.service-box .details-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+
+
 .details-section {
   margin: 40px auto;
   padding: 20px 15px;
