@@ -981,6 +981,7 @@ section {
   width: 300px;             
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  overflow: visible;
 }
 
 /* Hover Effect */
@@ -1030,14 +1031,15 @@ section {
   box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
 }
 
-/* Image inside card */
-.service-box .details-image {
-  width: 100%;        
-  max-height: 180px;  
-  object-fit: cover;  
-  border-radius: 15px;
-  margin-bottom: 15px;
+.service-box img,
+.details-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin-top: 10px;
 }
+
 
 /* Responsive for mobile */
 @media (max-width: 768px) {
