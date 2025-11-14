@@ -1034,15 +1034,46 @@ section {
   box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
 }
 
-/* Image Styling */
+/* Default Image Styling */
 .service-box .details-image {
-  display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
+  display: block;
   border-radius: 10px;
   margin-top: 10px;
+  object-fit: contain;
 }
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+
+  .service-box {
+    width: 95%;
+    padding: 10px 15px;
+  }
+
+  .service-box h2 {
+    font-size: 17px;
+    margin: 5px 0;
+  }
+
+  .service-box p {
+    font-size: 15px;
+  }
+
+  .service-box .read {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  /* FINAL FIX → Image force visible on mobile */
+  .service-box .details-image {
+    display: block !important;
+    max-height: 180px;
+    width: 100%;
+  }
+}
+
 
 /* ------------------------------
    DETAILS SECTION
