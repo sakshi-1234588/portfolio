@@ -957,30 +957,33 @@ section {
   margin-bottom: 20px;
 }
 
+/* ------------------------------
+   SERVICES SECTION STYLING
+------------------------------ */
 
-/* Services Container */
+/* Section Container */
 #services {
   padding: 100px 20px;
 }
 
-/* Card Layout - Horizontal */
+/* Service Card Layout */
 .services-list {
   display: flex;
-  flex-direction: row;     
-  flex-wrap: wrap;         
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-/* Individual Card */
+/* Individual Service Box */
 .service-box {
   background-color: #0c1f31;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  padding: 15px 20px;       
-  width: 300px;             
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 15px 20px;
+  width: 300px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: visible;
 }
 
@@ -997,16 +1000,16 @@ section {
   display: block;
 }
 
-/* Card Heading */
+/* Heading */
 #services h2 {
   margin-top: 5px;
   margin-bottom: 5px;
+  font-size: 18px;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
-  font-size: 18px;
 }
 
-/* Paragraph */
+/* Description */
 .service-box p {
   font-size: 20px;
   color: #ddd;
@@ -1031,18 +1034,97 @@ section {
   box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
 }
 
-.service-box img,
-.details-image {
+/* Image Styling */
+.service-box .details-image {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
+  object-fit: contain;
   border-radius: 10px;
   margin-top: 10px;
 }
 
+/* ------------------------------
+   DETAILS SECTION
+------------------------------ */
 
-/* Responsive for mobile */
+.details-section {
+  margin: 40px auto;
+  padding: 20px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.details-section h2 {
+  font-size: 18px;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.details-section .text {
+  font-size: 28px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Detail Boxes Container */
+.details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px 15px;
+  background-color: #0c1f31;
+}
+
+/* Individual Detail Box */
+.details-box {
+  background-color: #0c1f31;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.15);
+  padding: 15px 12px;
+  width: 220px;
+  min-height: 280px;
+  text-align: center;
+  transition: 0.3s ease;
+  margin: 0 auto;
+}
+
+.details-box h2 {
+  font-size: 14px;
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.details-box .text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Hover Effect */
+.details-box:hover {
+  background-color: #0ef;
+  color: #000;
+}
+
+.details-box:hover .text,
+.details-box:hover h2 {
+  color: #000;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN (Mobile)
+------------------------------ */
+
 @media (max-width: 768px) {
+
+  /* Services Section */
   #services {
     padding: 50px 10px;
   }
@@ -1073,18 +1155,31 @@ section {
   }
 
   .service-box .details-image {
-    max-height: 150px; 
+    max-height: 150px;
+  }
+
+  /* Details Section */
+  .details-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .details-box {
+    width: 90%;
+    padding: 12px 10px;
+    min-height: auto;
+  }
+
+  .details-box h2 {
+    font-size: 14px;
+  }
+
+  .details-box .text {
+    font-size: 13px;
   }
 }
 
-
-.service-box .details-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 150px;
-  object-fit: contain;
-}
 
 
 
