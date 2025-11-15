@@ -103,7 +103,7 @@ body {
 }
 
 .overlay-menu ul li {
-  margin: 25px 0; /* more elegant spacing */
+  margin: 25px 0; 
   opacity: 0;
   transform: translateX(-50px);
   animation: slideIn 0.5s forwards;
@@ -259,13 +259,13 @@ body:not(.dark-theme) .right-container {
 
 ody.dark-theme .navbar {
   background: #1a1a2e;
-  height: 70px; /* same height */
+  height: 70px; 
   padding: 0 2rem;
 }
 
 body.light-theme .navbar {
   background: #ffffff;
-  height: 70px; /* same height */
+  height: 70px; 
   padding: 0 2rem;
 }
 
@@ -275,7 +275,7 @@ body.light-theme .navbar {
 
 body.dark-theme .header-container,
 body.light-theme .header-container {
-  padding: 1rem 2rem; /* same padding */
+  padding: 1rem 2rem; 
 }
 
 
@@ -363,6 +363,7 @@ body.dark-theme textarea:focus {
 /* Cards / Boxes */
 body.dark-theme .card,
 body.dark-theme .project-box,
+body.dark-theme .details-box,
 body.dark-theme .service-box {
   background: rgba(26, 26, 46, 0.85); /* match with dark background */
   color: #ffffff;
@@ -375,6 +376,7 @@ body.dark-theme .service-box {
 
 body.dark-theme .card:hover,
 body.dark-theme .project-box:hover,
+body.dark-theme .details-box,
 body.dark-theme .service-box:hover {
   box-shadow: 0 6px 20px rgba(0, 204, 204, 0.2);
   transform: translateY(-5px);
@@ -472,6 +474,17 @@ section {
   justify-content: center; 
   padding: 10px 0;
 }
+
+@media (max-width: 768px) {
+  
+  .btn-primary,
+  .btn-secondary {
+    background-color: #00ffff !important;
+    color: #000 !important;
+  }
+
+}
+
 
 .btn-primary,
 .btn-secondary {
@@ -851,6 +864,7 @@ section {
   to   { transform: rotate(360deg); }
 }
 
+
 /* === Education Section === */
 .education-section {
    padding: 40px 20px;
@@ -1047,6 +1061,13 @@ section {
   object-fit: contain;
 }
 
+.service-box .read,
+.details-box .read {
+  display: inline-block;
+  margin: 10px auto;
+}
+
+
 /* ------------------------------
    MOBILE RESPONSIVE
 ------------------------------ */
@@ -1220,8 +1241,18 @@ section {
   text-decoration-thickness: 4px;
 }
 
+
+
+
+@media (max-width: 768px) {
+  section {
+    padding: 40px 0;   
+  }
+}
+
+
 .container1 {
-  max-width: 600px;
+max-width: 600px;
   width: 100%;
   padding: 20px;
   margin: 10px auto;
@@ -1229,6 +1260,8 @@ section {
   box-shadow: 0 0 25px rgba(0, 238, 255, 0.2);
   transition: all 0.3s ease-in-out;
 }
+
+
 
 .heading {
   text-align: center;
@@ -1459,6 +1492,8 @@ section {
   text-align: center;   
 }
 
+
+
 .main-text h2 {
   font-size: 50px;
   line-height: 1.2;
@@ -1575,6 +1610,14 @@ section {
   gap: 3rem;
   padding: 20px 15px;
   margin-top: 20px;
+}
+
+.contact-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .contact-text h2 {
@@ -1703,37 +1746,37 @@ section {
 @media (max-width: 768px) {
   /* Contact section spacing fix */
   #contact {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
   .contact-text {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     text-align: center;
   }
 
   .contact-text h2 {
     font-size: 34px;
     line-height: 1.2;
-    margin: 5px 0 !important;
-    padding: 10px !important;
+    margin: 5px 0;
+    padding: 10px;
     text-align: center;
   }
 
   .contact-text h4 {
-    margin: 5px 0 !important;
-    padding: 0 !important;
+    margin: 5px 0;
+    padding: 0;
   }
 
   .contact-text p {
-    margin: 5px 0 !important;
-    padding: 0 !important;
+    margin: 5px 0;
+    padding: 0;
   }
   .contact-icons {
     justify-content: center;

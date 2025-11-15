@@ -149,5 +149,16 @@ document.addEventListener("DOMContentLoaded", () => {
     overlayMenu.style.display = 'none';
   });
 });
+// AOS Scroll Animations Initialize
+document.addEventListener("DOMContentLoaded", function () {
+  AOS.init({
+    duration: 800,     // animation speed
+    offset: 120,       // trigger point
+    easing: "ease-in-out",
+    once: true,        // animate only once
+  });
+});
+
+
 
 
