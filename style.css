@@ -1684,6 +1684,7 @@ max-width: 600px;
   font-size: 20px;
 }
 
+
 .contact-icons a {
   display: inline-flex;
   justify-content: center;
@@ -1792,15 +1793,27 @@ max-width: 600px;
     margin: 5px 0;
     padding: 0;
   }
+ @media (max-width: 768px) {
+
   .contact-icons {
-    justify-content: center;
     display: flex;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;          /* पुरेशी जागा */
+    flex-wrap: nowrap;  /* MOST IMPORTANT → आता एकही icon खाली जाणार नाही */
   }
+
+  .contact-icons a {
+    width: 45px;
+    height: 45px;
+    margin: 0;         /* extra margin काढले */
+  }
+}
 
   .contact-form {
     padding: 10px;
   }
+
 
 
 /* Clean Footer Design */
@@ -2187,6 +2200,34 @@ max-width: 600px;
   .contact-form .send {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+
+  .contact {
+    padding: 40px 20px !important;
+    width: 100%;
+    display: block;
+  }
+
+  .contact .contact-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 0 auto !important;
+    display: block;
+  }
+
+  .contact form {
+    width: 100% !important;
+  }
+
+  .contact input,
+  .contact textarea {
+    width: 100% !important;
+    padding: 12px;
+  }
+}
+
   /* Footer */
   footer {
     text-align: center;
