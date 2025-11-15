@@ -765,9 +765,11 @@ section {
   min-height: 100vh;
 }
 
+
 .about-img {
   width: 520px;
   height: 520px;
+  margin-top: auto;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
@@ -1263,7 +1265,7 @@ max-width: 600px;
 
 
 
-.heading {
+.heading1 {
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 10px;
@@ -1350,6 +1352,16 @@ max-width: 600px;
   color: #0ef;
   gap: 20px;
 }
+.radial-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 
 .radial-bars svg {
   position: absolute;
@@ -1358,6 +1370,8 @@ max-width: 600px;
   transform: rotate(-90deg);
   gap: 20px;
 }
+
+
 
 
 /* Background circle */
@@ -1451,7 +1465,7 @@ max-width: 600px;
 
 .text {
   text-align: center;
-  margin-top: 180px;
+  margin-top: 120px;
   font-size: 1rem;
 }
 
@@ -1781,7 +1795,7 @@ max-width: 600px;
   .contact-icons {
     justify-content: center;
     display: flex;
-    gap: 15px;
+    gap: 5px;
   }
 
   .contact-form {
