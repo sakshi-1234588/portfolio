@@ -1796,6 +1796,7 @@ max-width: 600px;
   0% { opacity: 0; transform: translateX(-50px); }
   100% { opacity: 1; transform: translateX(0); }
 }
+
 /* ===================== Responsive for Mobile ===================== */
 @media (max-width: 768px) {
   .contact {
@@ -1803,8 +1804,6 @@ max-width: 600px;
     gap: 1.5rem;
     padding: 10px;
     margin: 0;
-    text-align: center;
-    display: flex;
   }
 
   .contact-text h2 {
@@ -1853,7 +1852,6 @@ max-width: 600px;
     padding: 12px;
   }
 }
-
 
 
 
