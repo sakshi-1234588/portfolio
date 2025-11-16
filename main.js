@@ -9,14 +9,10 @@ var typed = new Typed(".text", {
   loop: true
 });
 
-
-// =====================
-// HELPER: ON DOM READY
-// =====================
 document.addEventListener("DOMContentLoaded", () => {
 
   // =====================================================
-  // 2. Navbar hide on scroll
+  // Navbar hide on scroll
   // =====================================================
   const nav = document.querySelector('.navlist');
   const homeSection = document.getElementById('home');
@@ -28,19 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
   // =====================================================
-  // 3. Radial Professional Skills Animation
+  // Radial Professional Skills Animation
   // =====================================================
   const radialObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-
       const bar = entry.target;
       const path = bar.querySelector('.path');
       const text = bar.querySelector('.percentage');
       const percent = parseInt(text.dataset.percent);
-
       const radius = 80;
       const circ = 2 * Math.PI * radius;
       const offset = circ - (circ * percent / 100);
@@ -53,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         path.style.strokeDashoffset = offset;
       }, 150);
 
-      // Count Animation
       let x = 0;
       const countInterval = setInterval(() => {
         text.textContent = x + "%";
@@ -64,12 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
       radialObserver.unobserve(bar);
     });
   }, { threshold: 0.5 });
-
   document.querySelectorAll(".radial-bars").forEach(bar => radialObserver.observe(bar));
 
-
   // =====================================================
-  // 4. Section Heading Animation
+  // Section Heading Animation
   // =====================================================
   const headingObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -79,22 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, { threshold: 0.3 });
-
   document.querySelectorAll(".animate-heading").forEach(h => headingObserver.observe(h));
 
-
   // =====================================================
-  // 5. Technical Skills (Linear Bars)
+  // Technical Skills (Linear Bars)
   // =====================================================
   const linearObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-
       const line = entry.target;
       const span = line.querySelector("span");
       const percent = parseInt(line.dataset.percent);
-
-      // percent text
       let txt = line.querySelector(".progress-percent");
       if (!txt) {
         txt = document.createElement("div");
@@ -116,12 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
       linearObserver.unobserve(line);
     });
   }, { threshold: 0.5 });
-
   document.querySelectorAll(".progress-line").forEach(line => linearObserver.observe(line));
 
-
   // =====================================================
-  // 6. Theme Toggle
+  // Theme Toggle
   // =====================================================
   const toggle = document.getElementById('theme-toggle');
   if (toggle) {
@@ -131,9 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-
   // =====================================================
-  // 7. Overlay Menu Open & Smooth Scroll
+  // Overlay Menu Open & Smooth Scroll
   // =====================================================
   const menuBtn = document.getElementById('menu-btn');
   const overlayMenu = document.getElementById('overlay-menu');
@@ -164,9 +146,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // =====================================================
+  // Service Boxes Click (Highlight + Show Details)
+  // =====================================================
+  document.querySelectorAll('.service-box .read').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const box = btn.closest('.service-box');
+      const targetId = btn.getAttribute('href').substring(1);
+      const detailBox = document.getElementById(targetId);
+
+      // Highlight clicked service box
+      document.querySelectorAll('.service-box').forEach(b => b.classList.remove('active'));
+      box.classList.add('active');
+
+      // Show related details box
+      document.querySelectorAll('.details-box').forEach(d => d.classList.remove('active'));
+      if(detailBox) detailBox.classList.add('active');
+
+      // Scroll into view smoothly on mobile
+      if(detailBox) detailBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 
   // =====================================================
-  // 8. AOS Initialize
+  // AOS Initialize
   // =====================================================
   AOS.init({
     duration: 800,
