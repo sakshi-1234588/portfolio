@@ -1829,7 +1829,7 @@ max-width: 600px;
     font-size: 14px;
     line-height: 20px;
     margin: 5px 0;
-    text-align: center;
+    text-align: start;
   }
 }
 
@@ -1838,14 +1838,14 @@ max-width: 600px;
     padding: 0;
     list-style: none;
     margin-bottom: 15px;
+    text-align: start;
   }
 
   .contact-list li {
     font-size: 14px;
     gap: 5px;
     display: flex;
-    align-items: center;
-    justify-content: center; /* center icons & text */
+    align-items: start;
   }
 
   /* Contact Icons */
