@@ -365,15 +365,12 @@ body.dark-theme .card,
 body.dark-theme .project-box,
 body.dark-theme .details-box,
 body.dark-theme .service-box {
-  background: rgba(26, 26, 46, 0.85); /* match with dark background */
+  background: rgba(26, 26, 46, 0.85); 
   color: #ffffff;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.08); /* subtle cyan glow */
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.08); 
   transition: all 0.3s ease;
 }
-
-
-
 body.dark-theme .card:hover,
 body.dark-theme .project-box:hover,
 body.dark-theme .details-box,
@@ -381,21 +378,17 @@ body.dark-theme .service-box:hover {
   box-shadow: 0 6px 20px rgba(0, 204, 204, 0.2);
   transform: translateY(-5px);
 }
-
 /* Footer links */
 body.dark-theme footer a {
   color: #ffffff;
 }
-
 body.dark-theme footer a:hover {
   color: #00cccc;
 }
-
 /* Smooth transition for all */
 body.dark-theme * {
   transition: all 0.3s ease;
 }
-
 section {
   scroll-margin-top: 60px; 
 }
@@ -465,8 +458,6 @@ section {
   padding: 10px 15px;
   border-radius: 10px;
 }
-
-
 .cta-nav-buttons {
   margin-top: 10px;        
   display: flex;
@@ -484,8 +475,6 @@ section {
   }
 
 }
-
-
 .btn-primary,
 .btn-secondary {
   padding: 10px 25px;       
@@ -499,7 +488,6 @@ section {
   box-shadow: 0 0 10px rgba(0,255,255,0.4);
   border: none;            
 }
-
 .btn-primary:hover,
 .btn-secondary:hover {
   background: linear-gradient(45deg, #00b3b3, #00ffff);
@@ -542,12 +530,10 @@ section {
   color: #00eeff;
   transition: 0.3s;
 }
-
 .icons a i:hover {
   transform: scale(1.2);
   color: #fff;
 }
-
 .icons .fa-brands {
   display: flex;
   justify-content: center;
@@ -654,8 +640,6 @@ section {
     margin: 20px 10px;
   }
 }
-
-
 .btn-glow {
   display: inline-block;
   padding: 12px 28px;
@@ -678,7 +662,6 @@ section {
   background: #00ffff;
   color: #000;
 }
-
 
 /* 🔵 Click effect for icons */
 .icons .fa-brands.clicked {
@@ -727,7 +710,6 @@ section {
   box-shadow: none !important;
 }
 
-
 @media (max-width: 768px) {
   .design .circle:nth-child(1) {
     width: 22rem;
@@ -764,8 +746,6 @@ section {
   padding: 100px 40px;
   min-height: 100vh;
 }
-
-
 .about-img {
   width: 520px;
   height: 520px;
@@ -775,7 +755,6 @@ section {
   box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
   flex-shrink: 0;
 }
-
 .about-img img {
   width: 100%;
   height: 100%;
@@ -865,8 +844,6 @@ section {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
-
-
 /* === Education Section === */
 .education-section {
    padding: 40px 20px;
@@ -948,13 +925,7 @@ section {
     font-size: 2rem;
   }
 }
-
-
-
-/* ------------------------------
-   GLOBAL STYLES
------------------------------- */
-
+/* service */
 .services {
   color: aliceblue;
   font-size: 20px;
@@ -978,10 +949,6 @@ section {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-
-/* ------------------------------
-   SERVICES SECTION
------------------------------- */
 
 /* Section Container */
 #services {
@@ -1090,10 +1057,6 @@ section {
   color: #000;
 }
 
-/* ------------------------------
-   MOBILE RESPONSIVE
------------------------------- */
-
 @media (max-width: 768px) {
 
   #services {
@@ -1125,7 +1088,6 @@ section {
     font-size: 13px;
   }
 
-  /* FINAL MOBILE IMAGE FIX */
   .service-box .details-image {
     display: block !important;
     width: 100% !important;
@@ -1133,11 +1095,20 @@ section {
     object-fit: contain !important;
   }
 }
+.service-box:hover {
+  border: 2px solid #0ef;
+  background: rgba(0, 239, 255, 0.1);
+  box-shadow: 0 0 15px #0ef, 0 0 30px #0ef;
+  transition: all 0.3s ease;
+}
 
-/* ------------------------------
-   DETAILS SECTION
------------------------------- */
-
+.service-box.active {
+    border: 2px solid #0ef;
+    background: rgba(0, 239, 255, 0.1);
+    box-shadow: 0 0 15px #0ef, 0 0 30px #0ef;
+    transition: all 0.3s ease;
+  }
+ /*details section*/
 .details-section {
   margin: 40px auto;
   padding: 20px 15px;
@@ -1204,22 +1175,6 @@ section {
   color: #000;
 }
 
-
-
-.service-box:hover {
-  border: 2px solid #0ef;
-  background: rgba(0, 239, 255, 0.1);
-  box-shadow: 0 0 15px #0ef, 0 0 30px #0ef;
-  transition: all 0.3s ease;
-}
-
-.service-box.active {
-    border: 2px solid #0ef;
-    background: rgba(0, 239, 255, 0.1);
-    box-shadow: 0 0 15px #0ef, 0 0 30px #0ef;
-    transition: all 0.3s ease;
-  }
-
 @media (max-width: 768px) {
 
   .details-container {
@@ -1247,10 +1202,6 @@ section {
     line-height: 1.4; 
   }
 }
-
-
-
-
 
 /*my Skills */
 .radial-skill-container {
@@ -1282,15 +1233,11 @@ section {
   text-decoration-thickness: 4px;
 }
 
-
-
-
 @media (max-width: 768px) {
   section {
     padding: 40px 0;   
   }
 }
-
 
 .container1 {
 max-width: 600px;
@@ -1301,8 +1248,6 @@ max-width: 600px;
   box-shadow: 0 0 25px rgba(0, 238, 255, 0.2);
   transition: all 0.3s ease-in-out;
 }
-
-
 
 .heading1 {
   text-align: center;
@@ -1380,7 +1325,6 @@ max-width: 600px;
   }
  }
 
-
 .radial-bars {
   grid-template-columns: repeat(2, 1fr); 
   position: relative;
@@ -1401,7 +1345,6 @@ max-width: 600px;
     margin-bottom: 50px;
 }
 
-
 .radial-bars svg {
   position: absolute;
   top: 0;
@@ -1409,9 +1352,6 @@ max-width: 600px;
   transform: rotate(-90deg);
   gap: 20px;
 }
-
-
-
 
 /* Background circle */
 .progress-bar {
@@ -1450,8 +1390,6 @@ max-width: 600px;
   border-radius: 10px;
   transition: width 2s ease-in-out;
 }
-
-
 
 /* Default - hidden headings before scroll */
 .animate-heading {
@@ -1501,7 +1439,6 @@ max-width: 600px;
   color: #0ef;
 }
 
-
 .text {
   text-align: center;
   margin-top: 120px;
@@ -1545,15 +1482,12 @@ max-width: 600px;
   text-align: center;   
 }
 
-
-
 .main-text h2 {
   font-size: 50px;
   line-height: 1.2;
   margin: 30;             
   padding: 30px 0;       /
 }
-
 
 .main-text h2 span {
   color: #0ef;
@@ -1646,15 +1580,75 @@ max-width: 600px;
   height: 100%;
 }
 
+
+@media (max-width: 768px) {
+
+  /* Main heading */
+  .main-text {
+    padding: 10px 0;
+    margin: 15px;
+  }
+
+  .main-text h2 {
+    font-size: 30px;   /* heading smaller for mobile */
+    line-height: 1.2;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+
+  /* Portfolio grid */
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1rem;                
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  /* Boxes */
+  .row {
+    width: 100%;       
+    max-width: 400px;  
+    height: auto;      
+    margin: 0 auto 20px; 
+  }
+
+  /* Image */
+  .row img {
+    height: 200px;     
+    border-radius: 1rem;
+
+  /* Layer inside box */
+  .layer {
+    padding: 1rem 2rem;   
+  }
+
+  .layer h5 {
+    font-size: 18px;      
+  }
+
+  .layer p {
+    font-size: 14px;      /* smaller text */
+    line-height: 1.5;
+  }
+
+  /* Icon */
+  .layer i {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+
+
 @keyframes slideInLeft {
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
-/* ===================== Contact Section ===================== */
-
-/* Default (Desktop view) */
+/* Contact Section  */
 .contact {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1695,7 +1689,7 @@ max-width: 600px;
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 2rem;
-  white-space: pre-line; /* preserve line breaks */
+  white-space: pre-line; 
 }
 
 .contact-list {
@@ -1803,7 +1797,7 @@ max-width: 600px;
   100% { opacity: 1; transform: translateX(0); }
 }
 
-/* ===================== Responsive for Mobile ===================== */
+/*  Responsive for Mobile*/
 @media (max-width: 768px) {
   /* Contact Section Container */
   @media (max-width: 768px) {
@@ -1858,7 +1852,7 @@ max-width: 600px;
   .contact-icons {
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; /* wrap if too many icons */
+    flex-wrap: wrap; 
     margin-top: 15px;
   }
 
@@ -1877,10 +1871,10 @@ max-width: 600px;
 
   .contact-form input,
   .contact-form textarea {
-    width: 100%; /* full width */
+    width: 100%; 
     font-size: 14px;
     padding: 10px;
-    box-sizing: border-box; /* important */
+    box-sizing: border-box; 
     resize: none;
   }
 
@@ -1890,10 +1884,6 @@ max-width: 600px;
     width: 100%;
   }
 }
-
-
-
-
 
 /* Clean Footer Design */
 .footer {
@@ -2269,4 +2259,5 @@ max-width: 600px;
     margin-top: 80px;
     margin-bottom: 60px;
   }
+  
   
